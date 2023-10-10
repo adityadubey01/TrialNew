@@ -5,5 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice</title>
   </head>
-  <body></body>
+  <div id="firstHTML"></div>
+  <body>
+    <script>
+      const JSheading = document.createElement("h1");
+      JSheading.innerHTML = "Hello JavaScript";
+      console.log(JSheading);
+
+      const firstHTML = document.getElementById("firstHTML");
+      firstHTML.appendChild(JSheading);
+    </script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </body>
 </html>
