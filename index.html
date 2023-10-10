@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice</title>
   </head>
-  <div id="firstHTML"></div>
+  <div id="root">Not Rendered</div>
   <body>
-    <script>
-      const JSheading = document.createElement("h1");
-      JSheading.innerHTML = "Hello JavaScript";
-      console.log(JSheading);
-
-      const firstHTML = document.getElementById("firstHTML");
-      firstHTML.appendChild(JSheading);
-    </script>
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -23,5 +15,19 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
+    <script>
+      /*const JSheading = document.createElement("h1");
+      JSheading.innerHTML = "Hello JavaScript";
+      console.log(JSheading);
+
+      const firstHTML = document.getElementById("firstHTML");
+      firstHTML.appendChild(JSheading);*/
+
+      //Sequence Matter of the above two CDN Links
+      const reacth1 = React.createElement("h1", {}, "Hello React");
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+
+      reactRoot.render(reacth1);
+    </script>
   </body>
 </html>
