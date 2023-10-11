@@ -2962,59 +2962,122 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 //     <h1>Contact</h1>
 //   </div>
 // );
-const HeaderOption = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Home"
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "About"
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 25,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
+const LogoComponent = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+        className: "logo",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2UpTMYL-AlhkSDiGCILwei8gLrqO2fphdw&usqp=CAU",
+        alt: "Logo"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 23,
+        columnNumber: 5
+    }, undefined);
 };
-_c = HeaderOption;
-const HeaderComponent = ()=>{
+_c = LogoComponent;
+const SearchComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "search-bar",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderOption, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 32,
-                columnNumber: 8
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Contact"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                placeholder: "Search"
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 33,
+                lineNumber: 34,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                children: "Search"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 31,
+        lineNumber: 33,
         columnNumber: 5
     }, undefined);
 };
-_c1 = HeaderComponent;
+_c1 = SearchComponent;
+const OptionComponent = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "option",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Home"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 43,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "About"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 44,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "ContactUs"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 45,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Help"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 46,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 42,
+        columnNumber: 5
+    }, undefined);
+};
+_c2 = OptionComponent;
+const HeaderComponent = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LogoComponent, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 54,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SearchComponent, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 55,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(OptionComponent, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 56,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 53,
+        columnNumber: 5
+    }, undefined);
+};
+_c3 = HeaderComponent;
 const reactRoot = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 reactRoot.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 40,
+    lineNumber: 63,
     columnNumber: 18
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "HeaderOption");
-$RefreshReg$(_c1, "HeaderComponent");
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "LogoComponent");
+$RefreshReg$(_c1, "SearchComponent");
+$RefreshReg$(_c2, "OptionComponent");
+$RefreshReg$(_c3, "HeaderComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {

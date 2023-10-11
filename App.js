@@ -18,19 +18,42 @@ import ReactDOM from "react-dom/client";
 //   </div>
 // );
 
-const HeaderOption = () => {
+const LogoComponent = () => {
   return (
-    <>
-      <h1>Home</h1>
-      <h1>About</h1>
-    </>
+    <img
+      className="logo"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2UpTMYL-AlhkSDiGCILwei8gLrqO2fphdw&usqp=CAU"
+      alt="Logo"
+    ></img>
   );
 };
+
+const SearchComponent = () => {
+  return (
+    <div className="search-bar">
+      <input placeholder="Search"></input>
+      <button>Search</button>
+    </div>
+  );
+};
+
+const OptionComponent = () => {
+  return (
+    <div className="option">
+      <h3>Home</h3>
+      <h3>About</h3>
+      <h3>ContactUs</h3>
+      <h3>Help</h3>
+    </div>
+  );
+};
+
 const HeaderComponent = () => {
   return (
-    <div>
-      {<HeaderOption />}
-      <h1>Contact</h1>
+    <div className="header">
+      <LogoComponent />
+      <SearchComponent />
+      <OptionComponent />
     </div>
   );
 };

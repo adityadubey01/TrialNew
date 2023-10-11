@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+
+.option {
+  display: flex;
+  padding: 20px;
+}
+
+.option > h3 {
+  padding: 10px;
+}
+
+.search-bar {
+  padding-top: 45px;
+}
