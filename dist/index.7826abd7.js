@@ -2955,37 +2955,66 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 // const reactjsx1 = <h1>Home</h1>;
 // const reactjsx2 = <h1>About</h1>;
 // const reactjsx3 = <h1>Contact</h1>;
-const reactjsxdiv = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-    children: [
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Home"
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 15,
-            columnNumber: 5
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "About"
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 16,
-            columnNumber: 5
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Contact"
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 17,
-            columnNumber: 5
-        }, undefined)
-    ]
-}, void 0, true, {
-    fileName: "App.js",
-    lineNumber: 14,
-    columnNumber: 3
-}, undefined);
+// const reactjsxdiv = (
+//   <div>
+//     <h1>Home</h1>
+//     <h1>About</h1>
+//     <h1>Contact</h1>
+//   </div>
+// );
+const HeaderOption = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Home"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "About"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = HeaderOption;
+const HeaderComponent = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderOption, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 32,
+                columnNumber: 8
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Contact"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 31,
+        columnNumber: 5
+    }, undefined);
+};
+_c1 = HeaderComponent;
 const reactRoot = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-reactRoot.render(reactjsxdiv);
+reactRoot.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 40,
+    columnNumber: 18
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "HeaderOption");
+$RefreshReg$(_c1, "HeaderComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
