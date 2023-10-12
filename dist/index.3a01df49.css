@@ -29,4 +29,22 @@
   padding-top: 15px;
 }
 
+.card {
+  border: 1px solid #000;
+  width: 200px;
+  height: 300px;
+  margin-top: 15px;
+  margin-right: 100px;
+  padding: 10px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.RestaurantList {
+  flex-wrap: wrap;
+  display: flex;
+}
+
 /*# sourceMappingURL=index.3a01df49.css.map */

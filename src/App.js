@@ -9,7 +9,6 @@ const Applayout = () => {
     <>
       <HeaderComponent />
       <BodyComponent />
-      <FooterComponent />
     </>
   );
 };

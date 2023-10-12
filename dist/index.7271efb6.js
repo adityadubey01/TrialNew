@@ -2964,11 +2964,6 @@ const Applayout = ()=>{
                 fileName: "src/App.js",
                 lineNumber: 11,
                 columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footer.FooterComponent), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 12,
-                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
@@ -2977,7 +2972,7 @@ _c = Applayout;
 const reactRoot = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 reactRoot.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayout, {}, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 19,
+    lineNumber: 18,
     columnNumber: 18
 }, undefined));
 var _c;
@@ -27481,13 +27476,53 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "BodyComponent", ()=>BodyComponent);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _config = require("../config");
 const BodyComponent = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Body"
-    }, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "RestaurantList",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                RestaurantNum: (0, _config.restaurantList)[0]
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                RestaurantNum: (0, _config.restaurantList)[1]
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                RestaurantNum: (0, _config.restaurantList)[2]
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                RestaurantNum: (0, _config.restaurantList)[3]
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                RestaurantNum: (0, _config.restaurantList)[4]
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 2,
-        columnNumber: 10
+        lineNumber: 6,
+        columnNumber: 5
     }, undefined);
 };
 _c = BodyComponent;
@@ -27499,7 +27534,120 @@ $RefreshReg$(_c, "BodyComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestaurantCard":"bMboU","../config":"jtCLN"}],"bMboU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ffb1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RestaurantCard = ({ RestaurantNum })=>{
+    const { imageurl, name, cuisines, rating } = RestaurantNum;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: imageurl,
+                alt: "CardImage"
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines?.join(", ")
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: rating
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 4,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtCLN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
+const restaurantList = [
+    {
+        name: "BurgerKing1",
+        imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png",
+        cuisines: [
+            "Burger1",
+            "American1"
+        ],
+        rating: "1"
+    },
+    {
+        name: "BurgerKing2",
+        imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/35e41067793be976a29a9b928e29e175",
+        cuisines: [
+            "Burger2",
+            "American2"
+        ],
+        rating: "2"
+    },
+    {
+        name: "BurgerKing3",
+        imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/52dc3d4b494a4f9b891981a170573a24",
+        cuisines: [
+            "Burger3",
+            "American3"
+        ],
+        rating: "3"
+    },
+    {
+        name: "BurgerKing4",
+        imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
+        cuisines: [
+            "Burger4",
+            "American4"
+        ],
+        rating: "4"
+    },
+    {
+        name: "BurgerKing5",
+        imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/frf93wgnl9wrxsenedb6",
+        cuisines: [
+            "Burger5",
+            "American5"
+        ],
+        rating: "5"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

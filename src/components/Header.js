@@ -4,7 +4,7 @@ const LogoComponent = () => {
       className="logo"
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2UpTMYL-AlhkSDiGCILwei8gLrqO2fphdw&usqp=CAU"
       alt="Logo"
-    ></img>
+    />
   );
 };
 
