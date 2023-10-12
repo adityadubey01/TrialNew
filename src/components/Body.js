@@ -5,7 +5,7 @@ export const BodyComponent = () => {
   return (
     <div className="RestaurantList">
       {RestaurantList.map((curr) => {
-        return <RestaurantCard RestaurantNum={curr} />;
+        return <RestaurantCard RestaurantNum={curr} key={curr.id} />;
       })}
     </div>
   );

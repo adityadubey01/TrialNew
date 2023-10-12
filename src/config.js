@@ -1,5 +1,6 @@
 export const RestaurantList = [
   {
+    id: "1",
     name: "BurgerKing1",
     imageurl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png",
@@ -7,6 +8,7 @@ export const RestaurantList = [
     rating: "1",
   },
   {
+    id: "2",
     name: "BurgerKing2",
     imageurl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/35e41067793be976a29a9b928e29e175",
@@ -14,6 +16,7 @@ export const RestaurantList = [
     rating: "2",
   },
   {
+    id: "3",
     name: "BurgerKing3",
     imageurl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/52dc3d4b494a4f9b891981a170573a24",
@@ -21,6 +24,7 @@ export const RestaurantList = [
     rating: "3",
   },
   {
+    id: "4",
     name: "BurgerKing4",
     imageurl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
@@ -28,6 +32,7 @@ export const RestaurantList = [
     rating: "4",
   },
   {
+    id: "5",
     name: "BurgerKing5",
     imageurl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/frf93wgnl9wrxsenedb6",

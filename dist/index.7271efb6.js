@@ -27485,7 +27485,7 @@ const BodyComponent = ()=>{
         children: (0, _config.RestaurantList).map((curr)=>{
             return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                 RestaurantNum: curr
-            }, void 0, false, {
+            }, curr.id, false, {
                 fileName: "src/components/Body.js",
                 lineNumber: 8,
                 columnNumber: 16
@@ -27573,6 +27573,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "RestaurantList", ()=>RestaurantList);
 const RestaurantList = [
     {
+        id: "1",
         name: "BurgerKing1",
         imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png",
         cuisines: [
@@ -27582,6 +27583,7 @@ const RestaurantList = [
         rating: "1"
     },
     {
+        id: "2",
         name: "BurgerKing2",
         imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/35e41067793be976a29a9b928e29e175",
         cuisines: [
@@ -27591,6 +27593,7 @@ const RestaurantList = [
         rating: "2"
     },
     {
+        id: "3",
         name: "BurgerKing3",
         imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/52dc3d4b494a4f9b891981a170573a24",
         cuisines: [
@@ -27600,6 +27603,7 @@ const RestaurantList = [
         rating: "3"
     },
     {
+        id: "4",
         name: "BurgerKing4",
         imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
         cuisines: [
@@ -27609,6 +27613,7 @@ const RestaurantList = [
         rating: "4"
     },
     {
+        id: "5",
         name: "BurgerKing5",
         imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/frf93wgnl9wrxsenedb6",
         cuisines: [
