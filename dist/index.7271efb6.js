@@ -27482,44 +27482,16 @@ var _config = require("../config");
 const BodyComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "RestaurantList",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                RestaurantNum: (0, _config.restaurantList)[0]
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                RestaurantNum: (0, _config.restaurantList)[1]
+        children: (0, _config.RestaurantList).map((curr)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                RestaurantNum: curr
             }, void 0, false, {
                 fileName: "src/components/Body.js",
                 lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                RestaurantNum: (0, _config.restaurantList)[2]
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                RestaurantNum: (0, _config.restaurantList)[3]
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                RestaurantNum: (0, _config.restaurantList)[4]
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+                columnNumber: 16
+            }, undefined);
+        })
+    }, void 0, false, {
         fileName: "src/components/Body.js",
         lineNumber: 6,
         columnNumber: 5
@@ -27598,8 +27570,8 @@ $RefreshReg$(_c, "RestaurantCard");
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtCLN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
-const restaurantList = [
+parcelHelpers.export(exports, "RestaurantList", ()=>RestaurantList);
+const RestaurantList = [
     {
         name: "BurgerKing1",
         imageurl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png",

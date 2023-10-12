@@ -1,4 +1,4 @@
-export const restaurantList = [
+export const RestaurantList = [
   {
     name: "BurgerKing1",
     imageurl:
