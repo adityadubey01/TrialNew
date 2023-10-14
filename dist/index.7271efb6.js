@@ -27476,7 +27476,7 @@ var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
 function updateRestaurantList(currSearch, allRestaurantList) {
-    return allRestaurantList.filter((curr)=>curr.name.toLowerCase().includes(currSearch.toLowerCase()));
+    return allRestaurantList.filter((curr)=>curr.info.name.toLowerCase().includes(currSearch.toLowerCase()));
 }
 const BodyComponent = ()=>{
     _s();
@@ -27489,13 +27489,12 @@ const BodyComponent = ()=>{
     async function fetchRestaurantList() {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5355161&lng=77.3910265&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const datajson = await data.json();
-        console.log(datajson);
         setAllCurrentRestaurantList(datajson?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setCurrentRestaurantList(datajson?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
     return allRestaurantList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 37,
+        lineNumber: 36,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -27508,7 +27507,7 @@ const BodyComponent = ()=>{
                 }
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 40,
+                lineNumber: 39,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27519,7 +27518,7 @@ const BodyComponent = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 48,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27529,13 +27528,13 @@ const BodyComponent = ()=>{
                         RestaurantNum: curr
                     }, curr.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 58,
+                        lineNumber: 57,
                         columnNumber: 18
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 56,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
             ";"
@@ -27590,7 +27589,7 @@ const RestaurantCard = ({ RestaurantNum })=>{
                 lineNumber: 9,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: [
                     avgRating,
                     " Star"

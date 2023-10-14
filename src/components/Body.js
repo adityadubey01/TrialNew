@@ -5,7 +5,7 @@ import Shimmer from "./Shimmer";
 
 function updateRestaurantList(currSearch, allRestaurantList) {
   return allRestaurantList.filter((curr) =>
-    curr.name.toLowerCase().includes(currSearch.toLowerCase())
+    curr.info.name.toLowerCase().includes(currSearch.toLowerCase())
   );
 }
 
@@ -23,7 +23,6 @@ export const BodyComponent = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5355161&lng=77.3910265&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const datajson = await data.json();
-    console.log(datajson);
     setAllCurrentRestaurantList(
       datajson?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants

@@ -32,14 +32,15 @@
 .card {
   border: 1px solid #000;
   width: 200px;
-  height: 300px;
+  height: 320px;
   margin-top: 15px;
   margin-right: 100px;
   padding: 10px;
 }
 
 .card > img {
-  width: 50%;
+  width: 200px;
+  height: 120px;
 }
 
 .RestaurantList {
