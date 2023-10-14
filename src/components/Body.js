@@ -1,16 +1,32 @@
 import RestaurantCard from "./RestaurantCard";
 import { RestaurantList } from "../config";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
-function updateRestaurantList(currSearch, currRestaurantList) {
-  return currRestaurantList.filter((curr) => curr.name.includes(currSearch));
+function updateRestaurantList(currSearch, allRestaurantList) {
+  return allRestaurantList.filter((curr) => curr.name.includes(currSearch));
 }
 
 export const BodyComponent = () => {
   const [currSearch, setCurrSearch] = useState("Burger");
-  const [currRestaurantList, setCurrentRestaurantList] =
-    useState(RestaurantList);
-  return (
+  const [allRestaurantList, setAllCurrentRestaurantList] = useState([]);
+  const [currRestaurantList, setCurrentRestaurantList] = useState([]);
+
+  useEffect(() => {
+    fetchRestaurantList();
+  }, []);
+
+  async function fetchRestaurantList() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5355161&lng=77.3910265&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+    );
+    const datajson = await data.json();
+    setAllCurrentRestaurantList(RestaurantList);
+    setCurrentRestaurantList(RestaurantList);
+  }
+  return allRestaurantList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <input
         className="SearchBox"
@@ -22,7 +38,7 @@ export const BodyComponent = () => {
       />
       <button
         onClick={() => {
-          const data = updateRestaurantList(currSearch, currRestaurantList);
+          const data = updateRestaurantList(currSearch, allRestaurantList);
           setCurrentRestaurantList(data);
         }}
       >
