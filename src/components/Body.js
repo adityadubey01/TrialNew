@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 function updateRestaurantList(currSearch, allRestaurantList) {
-  return allRestaurantList.filter((curr) => curr.name.includes(currSearch));
+  return allRestaurantList.filter((curr) =>
+    curr.name.toLowerCase().includes(currSearch.toLowerCase())
+  );
 }
 
 export const BodyComponent = () => {
