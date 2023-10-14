@@ -8,15 +8,6 @@ const LogoComponent = () => {
   );
 };
 
-// const SearchComponent = () => {
-//   return (
-//     <div className="search-bar">
-//       <input placeholder="Search"></input>
-//       <button>Search</button>
-//     </div>
-//   );
-// };
-
 const OptionComponent = () => {
   return (
     <div className="option">

@@ -27360,14 +27360,6 @@ const LogoComponent = ()=>{
     }, undefined);
 };
 _c = LogoComponent;
-// const SearchComponent = () => {
-//   return (
-//     <div className="search-bar">
-//       <input placeholder="Search"></input>
-//       <button>Search</button>
-//     </div>
-//   );
-// };
 const OptionComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "option",
@@ -27376,41 +27368,41 @@ const OptionComponent = ()=>{
                 children: "Home"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 23,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: "About"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 24,
+                lineNumber: 15,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: "Cart"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 25,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: "ContactUs"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 26,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: "Help"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 27,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 22,
+        lineNumber: 13,
         columnNumber: 5
     }, undefined);
 };
@@ -27421,7 +27413,7 @@ const Title = ()=>{
         children: "FoodApp"
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 33,
+        lineNumber: 24,
         columnNumber: 10
     }, undefined);
 };
@@ -27432,23 +27424,23 @@ const HeaderComponent = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LogoComponent, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 39,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 40,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(OptionComponent, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 41,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 38,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
 };
@@ -27479,24 +27471,61 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _config = require("../config");
+var _react = require("react");
+var _s = $RefreshSig$();
+function updateRestaurantList(currSearch, currRestaurantList) {
+    return currRestaurantList.filter((curr)=>curr.name.includes(currSearch));
+}
 const BodyComponent = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "RestaurantList",
-        children: (0, _config.RestaurantList).map((curr)=>{
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                RestaurantNum: curr
-            }, curr.id, false, {
+    _s();
+    const [currSearch, setCurrSearch] = (0, _react.useState)("Burger");
+    const [currRestaurantList, setCurrentRestaurantList] = (0, _react.useState)((0, _config.RestaurantList));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                className: "SearchBox",
+                placeholder: "Text",
+                value: currSearch,
+                onChange: (e)=>{
+                    setCurrSearch(e.target.value);
+                }
+            }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 8,
-                columnNumber: 16
-            }, undefined);
-        })
-    }, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined);
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>{
+                    const data = updateRestaurantList(currSearch, currRestaurantList);
+                    setCurrentRestaurantList(data);
+                },
+                children: "Search"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "RestaurantList",
+                children: currRestaurantList?.map((curr)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                        RestaurantNum: curr
+                    }, curr.id, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 33,
+                        columnNumber: 18
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            ";"
+        ]
+    }, void 0, true);
 };
+_s(BodyComponent, "LCJRxMRswN72Qz+qdCxw3LrHZgg=");
 _c = BodyComponent;
 var _c;
 $RefreshReg$(_c, "BodyComponent");
@@ -27506,7 +27535,7 @@ $RefreshReg$(_c, "BodyComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestaurantCard":"bMboU","../config":"jtCLN"}],"bMboU":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./RestaurantCard":"bMboU","../config":"jtCLN","react":"21dqq"}],"bMboU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
