@@ -20,11 +20,18 @@ export const BodyComponent = () => {
 
   async function fetchRestaurantList() {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5355161&lng=77.3910265&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5355161&lng=77.3910265&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const datajson = await data.json();
-    setAllCurrentRestaurantList(RestaurantList);
-    setCurrentRestaurantList(RestaurantList);
+    console.log(datajson);
+    setAllCurrentRestaurantList(
+      datajson?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+    setCurrentRestaurantList(
+      datajson?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
   }
   return allRestaurantList.length === 0 ? (
     <Shimmer />
@@ -48,7 +55,7 @@ export const BodyComponent = () => {
       </button>
       <div className="RestaurantList">
         {currRestaurantList?.map((curr) => {
-          return <RestaurantCard RestaurantNum={curr} key={curr.id} />;
+          return <RestaurantCard RestaurantNum={curr} key={curr.info.id} />;
         })}
       </div>
       ;

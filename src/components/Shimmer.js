@@ -3,8 +3,8 @@ Shimmer = () => {
     <div className="RestaurantList">
       {Array(10)
         .fill("")
-        .map((curr) => {
-          return <div className="shimmer"></div>;
+        .map((curr, index) => {
+          return <div key={index} className="shimmer"></div>;
         })}
     </div>
   );
