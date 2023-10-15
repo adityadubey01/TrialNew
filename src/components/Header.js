@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const LogoComponent = () => {
   return (
     <img
@@ -20,6 +22,31 @@ const OptionComponent = () => {
   );
 };
 
+const AuthenticationComponent = () => {
+  const [authenticate, setAuthenticate] = useState(false);
+  return authenticate === true ? (
+    <div>
+      <button
+        onClick={() => {
+          setAuthenticate(false);
+        }}
+      >
+        LogOut
+      </button>
+    </div>
+  ) : (
+    <div>
+      <button
+        onClick={() => {
+          setAuthenticate(true);
+        }}
+      >
+        LogIn
+      </button>
+    </div>
+  );
+};
+
 const Title = () => {
   return <h1 className="title">FoodApp</h1>;
 };
@@ -30,6 +57,7 @@ const HeaderComponent = () => {
       <LogoComponent />
       <Title />
       <OptionComponent />
+      <AuthenticationComponent />
     </div>
   );
 };
