@@ -2,7 +2,7 @@ import { useRouteError } from "react-router-dom";
 
 const Error = () => {
   const err = useRouteError();
-  const { message } = err.error;
+  const { message } = err?.error;
   const { status, statusText } = err;
   return (
     <div>

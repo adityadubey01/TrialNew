@@ -61,4 +61,18 @@
   padding: 10px;
 }
 
+.OverallMenu {
+  display: flex;
+}
+
+.MenuList {
+  margin-left: 50px;
+}
+
+.IndividualImg {
+  width: 600px;
+  height: 300px;
+  margin-top: 30px;
+}
+
 /*# sourceMappingURL=index.3a01df49.css.map */

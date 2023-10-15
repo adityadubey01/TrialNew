@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { RestaurantList } from "../config";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 function updateRestaurantList(currSearch, allRestaurantList) {
   return allRestaurantList.filter((curr) =>
@@ -54,7 +55,11 @@ export const BodyComponent = () => {
       </button>
       <div className="RestaurantList">
         {currRestaurantList?.map((curr) => {
-          return <RestaurantCard RestaurantNum={curr} key={curr.info.id} />;
+          return (
+            <Link to={"/restaurant/" + curr.info.id} key={curr.info.id}>
+              <RestaurantCard RestaurantNum={curr} />
+            </Link>
+          );
         })}
       </div>
       ;
