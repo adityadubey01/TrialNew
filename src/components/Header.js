@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LogoComponent = () => {
   return (
@@ -13,10 +14,16 @@ const LogoComponent = () => {
 const OptionComponent = () => {
   return (
     <div className="option">
-      <h3>Home</h3>
-      <h3>About</h3>
+      <h3>
+        <Link to="/">Home</Link>
+      </h3>
+      <h3>
+        <Link to="/about">About</Link>
+      </h3>
       <h3>Cart</h3>
-      <h3>ContactUs</h3>
+      <h3>
+        <Link to="/contact">ContactUs</Link>
+      </h3>
       <h3>Help</h3>
     </div>
   );
