@@ -2,26 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_URL } from "../config";
 import Shimmer from "./Shimmer";
+import useRestaurantDetails from "../utils/useRestaurantDetails";
 
 const RestaurantMenu = () => {
   const { ResId } = useParams();
-  const [selectedMenu, setSelectedMenu] = useState([]);
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  const selectedMenu = useRestaurantDetails(ResId);
 
-  async function fetchMenu() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5355161&lng=77.3910265&restaurantId=" +
-        ResId +
-        "&catalog_qa=undefined&submitAction=ENTER"
-    );
-
-    const datajson = await data.json();
-    setSelectedMenu(datajson);
-  }
-
-  return selectedMenu.length === 0 ? (
+  return selectedMenu === null ? (
     <Shimmer />
   ) : (
     <div className="OverallMenu">

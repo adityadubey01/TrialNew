@@ -3,12 +3,7 @@ import { RestaurantList } from "../config";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
-function updateRestaurantList(currSearch, allRestaurantList) {
-  return allRestaurantList.filter((curr) =>
-    curr.info.name.toLowerCase().includes(currSearch.toLowerCase())
-  );
-}
+import { updateRestaurantList } from "../utils/Helper";
 
 export const BodyComponent = () => {
   const [currSearch, setCurrSearch] = useState("Burger");
