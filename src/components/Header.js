@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { BodyComponent } from "./Body";
 
 const LogoComponent = () => {
   return (
-    <img
-      className="logo"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2UpTMYL-AlhkSDiGCILwei8gLrqO2fphdw&usqp=CAU"
-      alt="Logo"
-    />
+    <Link to="/">
+      <img
+        className="logo"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2UpTMYL-AlhkSDiGCILwei8gLrqO2fphdw&usqp=CAU"
+        alt="Logo"
+      />
+    </Link>
   );
 };
 
@@ -25,6 +28,9 @@ const OptionComponent = () => {
         <Link to="/contact">ContactUs</Link>
       </h3>
       <h3>Help</h3>
+      <h3>
+        <Link to="/instaMart">InstaMart</Link>
+      </h3>
     </div>
   );
 };
