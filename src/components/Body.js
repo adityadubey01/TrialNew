@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { updateRestaurantList } from "../utils/Helper";
+import useOnline from "../utils/useOnline";
 
 export const BodyComponent = () => {
   const [currSearch, setCurrSearch] = useState("Burger");
@@ -28,6 +29,16 @@ export const BodyComponent = () => {
         ?.restaurants
     );
   }
+
+  const isOnline = useOnline();
+  if (!isOnline)
+    return (
+      <>
+        <h1>Something Went Wrong...</h1>
+        <h2>Please check your internet connection</h2>
+      </>
+    );
+
   return allRestaurantList.length === 0 ? (
     <Shimmer />
   ) : (
