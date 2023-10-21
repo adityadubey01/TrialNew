@@ -42,9 +42,9 @@ export const BodyComponent = () => {
   return allRestaurantList.length === 0 ? (
     <Shimmer />
   ) : (
-    <>
+    <div className="p-2 pt-5">
       <input
-        className="SearchBox"
+        className="bg-blue-50 border-spacing-1 focus:bg-green-300 p-1"
         placeholder="Text"
         value={currSearch}
         onChange={(e) => {
@@ -52,6 +52,7 @@ export const BodyComponent = () => {
         }}
       />
       <button
+        className="ml-5 p-1 bg-purple-800 text-white rounded-lg hover:bg-fuchsia-800"
         onClick={() => {
           const data = updateRestaurantList(currSearch, allRestaurantList);
           setCurrentRestaurantList(data);
@@ -59,7 +60,7 @@ export const BodyComponent = () => {
       >
         Search
       </button>
-      <div className="RestaurantList">
+      <div className="mt-4 flex flex-wrap">
         {currRestaurantList?.map((curr) => {
           return (
             <Link to={"/restaurant/" + curr.info.id} key={curr.info.id}>
@@ -69,6 +70,6 @@ export const BodyComponent = () => {
         })}
       </div>
       ;
-    </>
+    </div>
   );
 };

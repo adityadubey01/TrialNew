@@ -6,7 +6,7 @@ const LogoComponent = () => {
   return (
     <Link to="/">
       <img
-        className="logo"
+        className="w-28 p-2"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2UpTMYL-AlhkSDiGCILwei8gLrqO2fphdw&usqp=CAU"
         alt="Logo"
       />
@@ -16,19 +16,19 @@ const LogoComponent = () => {
 
 const OptionComponent = () => {
   return (
-    <div className="option">
-      <h3>
+    <div className="flex text-lg pt-3">
+      <h3 className="p-2">
         <Link to="/">Home</Link>
       </h3>
-      <h3>
+      <h3 className="p-2">
         <Link to="/about">About</Link>
       </h3>
-      <h3>Cart</h3>
-      <h3>
+      <h3 className="p-2">Cart</h3>
+      <h3 className="p-2">
         <Link to="/contact">ContactUs</Link>
       </h3>
-      <h3>Help</h3>
-      <h3>
+      <h3 className="p-2">Help</h3>
+      <h3 className="p-2">
         <Link to="/instaMart">InstaMart</Link>
       </h3>
     </div>
@@ -40,6 +40,7 @@ const AuthenticationComponent = () => {
   return authenticate === true ? (
     <div>
       <button
+        className="p-2 flex text-lg pt-5"
         onClick={() => {
           setAuthenticate(false);
         }}
@@ -50,6 +51,7 @@ const AuthenticationComponent = () => {
   ) : (
     <div>
       <button
+        className="p-2 flex text-lg pt-5"
         onClick={() => {
           setAuthenticate(true);
         }}
@@ -60,15 +62,10 @@ const AuthenticationComponent = () => {
   );
 };
 
-const Title = () => {
-  return <h1 className="title">FoodApp</h1>;
-};
-
 const HeaderComponent = () => {
   return (
-    <div className="header">
+    <div className="flex justify-between bg-blue-50 shadow-lg">
       <LogoComponent />
-      <Title />
       <OptionComponent />
       <AuthenticationComponent />
     </div>

@@ -27453,7 +27453,7 @@ const LogoComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
         to: "/",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: "logo",
+            className: "w-28 p-2",
             src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2UpTMYL-AlhkSDiGCILwei8gLrqO2fphdw&usqp=CAU",
             alt: "Logo"
         }, void 0, false, {
@@ -27470,9 +27470,10 @@ const LogoComponent = ()=>{
 _c = LogoComponent;
 const OptionComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "option",
+        className: "flex text-lg pt-3",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "p-2",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                     to: "/",
                     children: "Home"
@@ -27487,6 +27488,7 @@ const OptionComponent = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "p-2",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                     to: "/about",
                     children: "About"
@@ -27501,6 +27503,7 @@ const OptionComponent = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "p-2",
                 children: "Cart"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
@@ -27508,6 +27511,7 @@ const OptionComponent = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "p-2",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                     to: "/contact",
                     children: "ContactUs"
@@ -27522,6 +27526,7 @@ const OptionComponent = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "p-2",
                 children: "Help"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
@@ -27529,6 +27534,7 @@ const OptionComponent = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "p-2",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                     to: "/instaMart",
                     children: "InstaMart"
@@ -27555,6 +27561,7 @@ const AuthenticationComponent = ()=>{
     const [authenticate, setAuthenticate] = (0, _react.useState)(false);
     return authenticate === true ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+            className: "p-2 flex text-lg pt-5",
             onClick: ()=>{
                 setAuthenticate(false);
             },
@@ -27570,73 +27577,57 @@ const AuthenticationComponent = ()=>{
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+            className: "p-2 flex text-lg pt-5",
             onClick: ()=>{
                 setAuthenticate(true);
             },
             children: "LogIn"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 52,
+            lineNumber: 53,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 51,
+        lineNumber: 52,
         columnNumber: 5
     }, undefined);
 };
 _s(AuthenticationComponent, "Fk00mrABQUW8GkOpeolh9VHUs94=");
 _c2 = AuthenticationComponent;
-const Title = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        className: "title",
-        children: "FoodApp"
-    }, void 0, false, {
-        fileName: "src/components/Header.js",
-        lineNumber: 64,
-        columnNumber: 10
-    }, undefined);
-};
-_c3 = Title;
 const HeaderComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
+        className: "flex justify-between bg-blue-50 shadow-lg",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LogoComponent, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 70,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 71,
+                lineNumber: 68,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(OptionComponent, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 72,
+                lineNumber: 69,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AuthenticationComponent, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 73,
+                lineNumber: 70,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 69,
+        lineNumber: 67,
         columnNumber: 5
     }, undefined);
 };
-_c4 = HeaderComponent;
+_c3 = HeaderComponent;
 exports.default = HeaderComponent;
-var _c, _c1, _c2, _c3, _c4;
+var _c, _c1, _c2, _c3;
 $RefreshReg$(_c, "LogoComponent");
 $RefreshReg$(_c1, "OptionComponent");
 $RefreshReg$(_c2, "AuthenticationComponent");
-$RefreshReg$(_c3, "Title");
-$RefreshReg$(_c4, "HeaderComponent");
+$RefreshReg$(_c3, "HeaderComponent");
 
   $parcel$ReactRefreshHelpers$bfed.postlude(module);
 } finally {
@@ -33557,10 +33548,11 @@ const BodyComponent = ()=>{
         fileName: "src/components/Body.js",
         lineNumber: 43,
         columnNumber: 5
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "p-2 pt-5",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                className: "SearchBox",
+                className: "bg-blue-50 border-spacing-1 focus:bg-green-300 p-1",
                 placeholder: "Text",
                 value: currSearch,
                 onChange: (e)=>{
@@ -33572,6 +33564,7 @@ const BodyComponent = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "ml-5 p-1 bg-purple-800 text-white rounded-lg hover:bg-fuchsia-800",
                 onClick: ()=>{
                     const data = (0, _helper.updateRestaurantList)(currSearch, allRestaurantList);
                     setCurrentRestaurantList(data);
@@ -33583,7 +33576,7 @@ const BodyComponent = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "RestaurantList",
+                className: "mt-4 flex flex-wrap",
                 children: currRestaurantList?.map((curr)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/restaurant/" + curr.info.id,
@@ -33591,23 +33584,27 @@ const BodyComponent = ()=>{
                             RestaurantNum: curr
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 66,
+                            lineNumber: 67,
                             columnNumber: 15
                         }, undefined)
                     }, curr.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 65,
+                        lineNumber: 66,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 62,
+                lineNumber: 63,
                 columnNumber: 7
             }, undefined),
             ";"
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 45,
+        columnNumber: 5
+    }, undefined);
 };
 _s(BodyComponent, "vwF2F+PRtbMr0cXpjj5DZlWaIAU=", false, function() {
     return [
@@ -33637,7 +33634,7 @@ var _config = require("../config");
 const RestaurantCard = ({ RestaurantNum })=>{
     const { cloudinaryImageId, name, cuisines, avgRating } = RestaurantNum.info;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
+        className: "w-56 p-2 m-2 shadow-lg bg-blue-50",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: (0, _config.IMG_URL) + cloudinaryImageId,
@@ -33648,6 +33645,7 @@ const RestaurantCard = ({ RestaurantNum })=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-lg font-bold",
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
@@ -34027,12 +34025,13 @@ const RestaurantMenu = ()=>{
         lineNumber: 12,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "OverallMenu",
+        className: "p-6 flex",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-blue-50 p-4 shadow-lg",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "IndividualImg",
+                        className: "w-96 shadow-lg",
                         src: (0, _config.IMG_URL) + selectedMenu?.data?.cards[0]?.card?.card?.info?.cloudinaryImageId,
                         alt: "RestaurantImg"
                     }, void 0, false, {
@@ -34041,6 +34040,7 @@ const RestaurantMenu = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-lg",
                         children: [
                             "RestaurnatId - ",
                             selectedMenu?.data?.cards[0]?.card?.card?.info?.id
@@ -34051,6 +34051,7 @@ const RestaurantMenu = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-lg",
                         children: [
                             "Name - ",
                             selectedMenu?.data?.cards[0]?.card?.card?.info?.name
@@ -34061,13 +34062,14 @@ const RestaurantMenu = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "text-lg",
                         children: [
                             "Cuisines -",
                             selectedMenu?.data?.cards[0]?.card?.card?.info?.cuisines.join(", ")
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 28,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -34077,34 +34079,36 @@ const RestaurantMenu = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "MenuList",
+                className: "pl-16 ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-lg font-bold shadow-lg p-2 mb-4 bg-blue-50",
                         children: "Menu"
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 34,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        className: "text-lg bg-blue-50 p-4 shadow-lg",
                         children: selectedMenu?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards?.map((currItem)=>{
                             return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: currItem?.card?.info?.name
                             }, currItem?.card?.info?.id, false, {
                                 fileName: "src/components/RestaurantMenu.js",
-                                lineNumber: 39,
+                                lineNumber: 43,
                                 columnNumber: 17
                             }, undefined);
                         })
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 35,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 33,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined)
         ]
