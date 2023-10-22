@@ -2,24 +2,29 @@ import { useState } from "react";
 
 const Section = ({ title, description }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [btnName, setBtnName] = useState("Show");
+
   return (
     <div className="text-lg border-4 p-2 m-2">
       <h1 className="text-xl font-bold">{title}</h1>
-      <button
-        className="bg-pink-400 p-1 mt-2 rounded-lg text-white hover:bg-purple-500"
-        onClick={() => {
-          if (isVisible === false) {
-            setIsVisible(true);
-            setBtnName("Hide");
-          } else {
+      {isVisible ? (
+        <button
+          className="bg-pink-400 p-1 mt-2 rounded-lg text-white hover:bg-purple-500"
+          onClick={() => {
             setIsVisible(false);
-            setBtnName("Show");
-          }
-        }}
-      >
-        {btnName}
-      </button>
+          }}
+        >
+          Hide
+        </button>
+      ) : (
+        <button
+          className="bg-pink-400 p-1 mt-2 rounded-lg text-white hover:bg-purple-500"
+          onClick={() => {
+            setIsVisible(true);
+          }}
+        >
+          Show
+        </button>
+      )}
       {isVisible && <h1 className="pt-2">{description}</h1>}
     </div>
   );
