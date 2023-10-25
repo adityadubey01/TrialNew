@@ -10,16 +10,18 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const InstaMart = lazy(() => import("./components/InstaMart"));
 
 const Applayout = () => {
   return (
-    <>
+    <Provider store={store}>
       <HeaderComponent />
       <Outlet />
       <FooterComponent />
-    </>
+    </Provider>
   );
 };
 
