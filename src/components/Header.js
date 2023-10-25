@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BodyComponent } from "./Body";
+import { useSelector } from "react-redux";
+//import store from "../utils/store";
 
 const LogoComponent = () => {
   return (
@@ -15,6 +17,7 @@ const LogoComponent = () => {
 };
 
 const OptionComponent = () => {
+  const cartItems = useSelector((store) => store.cart.items);
   return (
     <div className="flex text-lg pt-3">
       <h3 className="p-2">
@@ -23,7 +26,6 @@ const OptionComponent = () => {
       <h3 className="p-2">
         <Link to="/about">About</Link>
       </h3>
-      <h3 className="p-2">Cart</h3>
       <h3 className="p-2">
         <Link to="/contact">ContactUs</Link>
       </h3>
@@ -31,6 +33,7 @@ const OptionComponent = () => {
       <h3 className="p-2">
         <Link to="/instaMart">InstaMart</Link>
       </h3>
+      <h3 className="p-2">Cart- {cartItems.length} items</h3>
     </div>
   );
 };
