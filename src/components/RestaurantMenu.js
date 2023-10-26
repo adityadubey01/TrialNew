@@ -3,10 +3,19 @@ import { useParams } from "react-router-dom";
 import { IMG_URL } from "../config";
 import Shimmer from "./Shimmer";
 import useRestaurantDetails from "../utils/useRestaurantDetails";
+import { useDispatch } from "react-redux";
+import { addItems } from "../utils/cartSlice";
 
 const RestaurantMenu = () => {
   const { ResId } = useParams();
   const selectedMenu = useRestaurantDetails(ResId);
+
+  const dispatch = useDispatch();
+
+  const handleCartItems = (chosenItem) => {
+    console.log(chosenItem);
+    dispatch(addItems(chosenItem));
+  };
 
   return selectedMenu === null ? (
     <Shimmer />
@@ -41,7 +50,15 @@ const RestaurantMenu = () => {
             (currItem) => {
               return (
                 <li key={currItem?.card?.info?.id}>
-                  {currItem?.card?.info?.name}
+                  {currItem?.card?.info?.name}-{" "}
+                  <button
+                    className="m-1 p-1 bg-pink-300 text-white"
+                    onClick={() => {
+                      handleCartItems(currItem?.card?.info);
+                    }}
+                  >
+                    Add
+                  </button>
                 </li>
               );
             }
